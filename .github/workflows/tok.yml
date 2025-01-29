@@ -6,11 +6,12 @@ jobs:
       steps: 
           - uses: actions/checkout@v4
           - run: gcc mandelbrot.c -lm
-          - run: sudo apt-get install gnuplot-nox
-          - run: sudo apt-get install texlive 
+          - run: sudo apt-get install gnuplot-nox texlive 
           - run: gnuplot plot.gpi
-          - run: pdflatex art.tex
-          - run: path: art.pdf
+          - run: pdflatex art.tex 
+          - uses: actions/upload-artifact@v4
+          - path: art.pdf
+          
            
           
           
