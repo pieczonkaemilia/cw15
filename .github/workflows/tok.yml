@@ -5,9 +5,12 @@ jobs:
       runs-on: ubuntu-latest
       steps: 
           - uses: actions/checkout@v4
-          - run: gcc mandelbrot.c
-          - run: sudo apt-get install texlive gnuplot-nox
+          - run: gcc mandelbrot.c -lm
+          - run: sudo apt-get install gnuplot-nox
+          - run: sudo apt-get install texlive 
           - run: gnuplot plot.gpi
+          - run: pdflatex art.tex
+          - run: path: art.pdf
            
           
           
