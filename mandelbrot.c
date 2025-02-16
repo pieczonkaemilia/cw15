@@ -19,8 +19,8 @@ assert(argc==5);
 
     for(int i=0; i<6400; i++)
         for (int j=0; j<64; j++){
-             double x=xmin+i*((xmax-xmin)/6400.);
-             double y=ymin+j*((ymax-ymin)/6400.);
+             double x=xmin+i*((xmax-xmin)/640.);
+             double y=ymin+j*((ymax-ymin)/640.);
              complex c=x+y*I;
             if(in_set(c,20))
                  printf("%g\t%g\n",x,y);
